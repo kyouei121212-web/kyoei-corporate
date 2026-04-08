@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ｜株式会社響栄</title>
+<meta name="description" content="株式会社響栄へのお問い合わせ。事業に関するご相談、インターン応募など、お気軽にご連絡ください。">
+<meta property="og:title" content="お問い合わせ｜株式会社響栄">
+<meta property="og:description" content="株式会社響栄へのお問い合わせ。事業に関するご相談、インターン応募など、お気軽にご連絡ください。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kyouei-jp.com/contact">
+<meta property="og:image" content="https://kyouei-jp.com/assets/ogp.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://kyouei-jp.com/contact">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<!-- Google Analytics (GA4) -->
+<!-- TODO: GA4測定IDを取得後、以下の2行のコメントを外してIDを設定してください
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav class="nav nav--scrolled" id="nav">
+  <a href="/" class="nav-logo"><img src="/assets/logo-nav.png" alt="株式会社響栄" class="nav-logo-img"></a>
+  <ul class="nav-links">
+    <li><a class="nav-link" href="/about">ABOUT</a></li>
+    <li><a class="nav-link" href="/service">SERVICE</a></li>
+    <li><a class="nav-link" href="/company">COMPANY</a></li>
+    <li><a class="nav-cta" href="/contact">CONTACT</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="メニュー"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-menu" id="mob">
+  <a href="/">TOP</a>
+  <a href="/about">ABOUT</a>
+  <a href="/service">SERVICE</a>
+  <a href="/company">COMPANY</a>
+  <a href="/contact">CONTACT</a>
+</div>
+
+<div class="sub-hero">
+  <p class="sub-hero-en">Contact</p>
+  <p class="sub-hero-ja">お問い合わせ</p>
+</div>
+
+<section class="s" id="contactSec">
+  <div class="s-inner">
+    <p class="contact-intro rv">以下のフォームに必要事項をご入力のうえ、送信してください。<br>内容を確認のうえ、担当者よりご連絡いたします。</p>
+    <form class="form-wrap rv rv-d1" name="contact" method="POST" action="/thanks" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="hidden"><label>このフィールドは入力しないでください: <input name="bot-field"></label></p>
+      <div class="fg">
+        <label class="fg-label" for="fType">お問い合わせ種別<span class="fg-tag fg-tag--req">必須</span></label>
+        <select class="fi fi--sel" id="fType" name="種別" required>
+          <option value="" disabled selected>選択してください</option>
+          <option value="事業に関するお問い合わせ">事業に関するお問い合わせ</option>
+          <option value="インターン応募">インターン応募</option>
+          <option value="採用に関するお問い合わせ">採用に関するお問い合わせ</option>
+          <option value="その他">その他</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label class="fg-label" for="fCompany">企業名 / 大学名<span class="fg-tag fg-tag--opt">任意</span></label>
+        <input type="text" class="fi" id="fCompany" name="企業名" placeholder="例）株式会社○○ / ○○大学">
+      </div>
+      <div class="fg">
+        <label class="fg-label" for="fName">氏名<span class="fg-tag fg-tag--req">必須</span></label>
+        <input type="text" class="fi" id="fName" name="氏名" placeholder="例）山田 太郎" required>
+      </div>
+      <div class="fg">
+        <label class="fg-label" for="fKana">ふりがな<span class="fg-tag fg-tag--req">必須</span></label>
+        <input type="text" class="fi" id="fKana" name="ふりがな" placeholder="例）やまだ たろう" required>
+      </div>
+      <div class="fg">
+        <label class="fg-label" for="fEmail">メールアドレス<span class="fg-tag fg-tag--req">必須</span></label>
+        <input type="email" class="fi" id="fEmail" name="メールアドレス" placeholder="例）example@email.com" required>
+      </div>
+      <div class="fg">
+        <label class="fg-label" for="fTel">電話番号<span class="fg-tag fg-tag--opt">任意</span></label>
+        <input type="tel" class="fi" id="fTel" name="電話番号" placeholder="例）03-1234-5678">
+      </div>
+      <div class="fg">
+        <label class="fg-label" for="fBody">お問い合わせ内容<span class="fg-tag fg-tag--req">必須</span></label>
+        <textarea class="fi fi--ta" id="fBody" name="お問い合わせ内容" placeholder="お問い合わせ内容をご記入ください。" required></textarea>
+      </div>
+      <div class="form-privacy">
+        <input type="checkbox" id="privCheck" required>
+        <label for="privCheck">個人情報の取り扱いに同意の上、送信してください。お預かりした個人情報は、お問い合わせへの対応にのみ使用し、第三者への提供は行いません。</label>
+      </div>
+      <button class="form-btn" type="submit">送信する</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <img src="/assets/logo-footer.png" alt="株式会社響栄" class="footer-logo-img">
+      <p class="footer-info">株式会社響栄<br>〒101-0044 東京都千代田区鍛冶町二丁目9-7 大貫ビル2階2</p>
+    </div>
+    <div class="footer-nav">
+      <a href="/">TOP</a>
+      <a href="/about">ABOUT</a>
+      <a href="/service">SERVICE</a>
+      <a href="/company">COMPANY</a>
+      <a href="/contact">CONTACT</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2024 KYOEI Inc. All Rights Reserved.</p></div>
+</footer>
+<button class="totop" id="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+<script src="/script.js"></script>
+</body>
+</html>
