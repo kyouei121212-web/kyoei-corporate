@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Netlify Forms detection</title>
+</head>
+<body>
+  <!--
+    このファイルは Netlify がビルド時にフォームを検出するための専用ページです。
+    静的エクスポート（Next.js）では Netlify のフォーム検出が取りこぼすことがあるため、
+    フィールド名を完全に一致させた隠しフォームをここに置いて確実に登録させます。
+    実際にユーザーが入力するフォームは /contact に表示されます。
+  -->
+  <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact" />
+    <input name="bot-field" />
+    <select name="種別">
+      <option value="事業に関するお問い合わせ"></option>
+    </select>
+    <input type="text" name="企業名" />
+    <input type="text" name="氏名" />
+    <input type="text" name="ふりがな" />
+    <input type="email" name="メールアドレス" />
+    <input type="tel" name="電話番号" />
+    <textarea name="お問い合わせ内容"></textarea>
+  </form>
+</body>
+</html>

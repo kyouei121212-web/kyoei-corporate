@@ -1,0 +1,17 @@
+{
+  "name": "kyoei-corporate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "株式会社響栄 コーポレートサイト (Next.js / 静的エクスポート)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && rm -f out/CLAUDE.md",
+    "start": "next start",
+    "preview": "npx serve out"
+  },
+  "dependencies": {
+    "next": "^15",
+    "react": "^19",
+    "react-dom": "^19"
+  }
+}
