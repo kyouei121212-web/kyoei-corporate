@@ -16,6 +16,11 @@ export const metadata = {
     apple: '/assets/apple-touch-icon.png',
   },
   manifest: '/site.webmanifest',
+  // Google Search Console（URLプレフィックス・HTMLタグ方式）の所有権確認用。
+  // ※GSCの「HTMLタグ」画面に表示される content の値に必ず合わせること（DNS方式とは別トークンの場合あり）。
+  verification: {
+    google: 'H6npQdRn5-wgG7njXLOIcVup9RGVdmx7Nv8DPGT5Pu8',
+  },
 };
 
 export const viewport = {
